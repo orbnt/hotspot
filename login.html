@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title id="title"></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
+<link rel="stylesheet" href="css/mikhmon-ui-light.css">
+<link rel="stylesheet" href="css/background.css">
+<link rel="icon" href="img/favicon.png" />
+<script type="text/javascript" src="js/PrayTimes.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<style>
+@media only screen and (max-width: 360px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+table, thead, tbody, th, td, tr {font-size: 11px}
+#timetable td, #timetable th {padding: 5px;}
+tr {margin: 0;}}
+@media screen and (max-width: 220px) {
+.onoff {margin:-35px 5px 5px 5px;}}
+</style>
+</head>
+
+<body class="background">
+	<div class="container">
+		<div class="row">
+			<div class="col-8 mr-a" id="main" style="float:none;">
+				<div class="row">
+					<div class="col-4">	
+						<div class="row">
+							<div class="col-12">
+								<div class="box bmh-80 bg-primary box-shadow text-center"><img src="img/orbitnet.png" alt="OrbitNet Hotspot" style="border-radius: 5px; width:100%; max-width: 300px; height:auto;"/></div>
+							</div>
+						</div>
+
+
+						<div class="row">
+							<div class="col-12">
+								<div class="card  box-shadow">
+									<div class="card-header bg-primary"><h3>Silakan Login</h3></div>
+									<div class="card-body">
+								$(if chap-id)
+									<form name="sendin" action="$(link-login-only)" method="post">
+										<input type="hidden" name="username" />
+										<input type="hidden" name="password" />
+										<input type="hidden" name="dst" value="$(link-orig)" />
+										<input type="hidden" name="popup" value="true" />
+									</form>
+	
+									<script type="text/javascript" src="/md5.js"></script>
+									<script type="text/javascript">
+									<!--
+	    							function doLogin() {
+									document.sendin.username.value = document.login.username.value;
+									document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+									document.sendin.submit();
+									return false;
+	    							}
+									//-->
+									</script>
+								$(endif)
+						<style>
+						blink{
+						-webkit-animation: 2s linear infinite kedip; /* for Safari 4.0 - 8.0 */ animation: 2s linear infinite kedip;
+						}
+						
+						/* for Safari 4.0 - 8.0 */
+						@-webkit-keyframes kedip {
+						0% {
+						visibility: hidden;
+						}
+						50% {
+						visibility: hidden;
+						}
+						100% {
+						visibility: visible;
+						}
+						}
+						
+						@keyframes kedip {
+						0% {
+						visibility: hidden;
+						}
+						50% {
+						visibility: hidden;
+						}
+						100% {
+						visibility: visible;
+						}
+						}</style>
+						
+					<div>	
+					<form autocomplete="off" name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+							<div class="row">
+								<div class="col-4 col-md-4"> 
+								<div class="box mr-2 pointer text-center text-light" id="btnvcr" onclick="voucher()">Voucher</div>
+								</div>
+								<div class="col-4 col-md-4">
+								<div class="box mr-2 pointer text-center text-light" id="btnmem" onclick="member()">Member</div>
+								</div>
+								<div class="col-4 col-md-4">
+								<div class="box mr-2 pointer text-center text-light bg-blue" id="qr" onclick="window.location='https://laksa19.github.io/myqr';">QR Code</div>
+								</div>
+							</div>
+								<input class="form-control-md mr-t-10 plch-center" name="username" type="text" value="$(username)" placeholder="Voucher" />
+								<input class="form-control-md mr-t-10 plch-center" name="password" type="hidden" placeholder="Password" />
+
+							<div class="text-center mr-t-10">
+								<button type="submit" class="w-12 btn-md bg-success pd-5">Login</button>
+							</div>
+					</form>
+				</div>
+					
+				$(if error)<div class="alert bg-danger text-center mr-t-10">$(error)</div>$(endif)
+			</div>
+			<div class="card-footer bg-primary mr-t-10 text-center">
+				$(if trial == 'yes')Coba gratis klik <a class="text-pink text-bold" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">di sini</a>$(endif)
+			</div>
+			<blink class="text-center"><h3>Whatsapp FREE</h3></blink>
+		</div>
+	</div>
+	<div class="col-12">
+		<div class="card box-shadow">
+			<div class="card-header bg-warning"><h3>Catatan</h3></div>
+			<div class="card-body align-middle">Kode Voucher / Username menggunakan huruf kecil.<br> Klik pada tab QR Code, jika kamera tidak tampil klik "Open in Chrome" dan izinkan akses kamera.</div>
+		</div>
+	</div>
+</div>
+</div>
+
+	<div class="col-8">
+		<div class="row">
+			<div class="col-12">
+				<div class="card box-shadow">
+					<div class="card-header bg-success"><h3><a href="index.html">OrbitNet Hotspot</a></h3></div>
+					<div class="card-body">
+						<p>Sebuah layanan internet dari langit</p>
+						<p>Menyediakan voucher internet berbasis kuota sesuai kebutuhan dengan harga yang terjangkau.</p><br/>
+                      <p>Bergabung di Telegram  <a href="https://t.me/VOrbitNet3bot">Voucher OrbitNet</a>  untuk mendapatkan harga yang terbaik
+                      </p><br/>
+					  <p>Cek kode bayar silakan  <a href="https://orbitnet.rumahmitha.com/vcr/kodevoucher.php">klik disini</a></p>
+					</div>
+				</div>				
+			</div>
+			<div class="col-12">
+				<div class="card box-shadow">
+					<div class="card-header bg-cyan"><h3><a href="index.html">Pilihan Paket Internet</a></h3></div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-6">
+								<div class="box bg-pink bmh-60">
+									<div class="box-group">
+            							<div class="box-group-icon"> <a href="vwarnet.html">Wr</a></div>
+                              <div class="box-group-area">
+                                <span>
+                                  <a href="vwarnet.html">Paket Warnet</a><br />
+                                  Berinternet diwaktu luang<br />
+                                </span>
+              							</div>
+            						</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="box bg-red bmh-60">
+									<div class="box-group">
+            							<div class="box-group-icon"><a href="vreguler.html">Rg</a></div>
+                              <div class="box-group-area">
+                                <span>
+                                  <a href="vreguler.html">Paket Reguler</a
+                                  ><br />
+                                  Memenuhi kebutuhan internet sehari-hari<br />
+                                </span>
+              							</div>
+            						</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="box bg-blue bmh-60">
+									<div class="box-group">
+            							<div class="box-group-icon"><a href="vronda.html">Rd</a></div>
+                              <div class="box-group-area">
+                                <span>
+                                  <a href="vronda.html">Paket Ronda</a><br />
+                                  Kuota malam, internet kecepatan tinggi<br />
+                                </span>
+              							</div>
+            						</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="box bg-purple bmh-60">
+									<div class="box-group">
+            							<div class="box-group-icon"><a href="vngelong.html">Ng</a></div>
+                              <div class="box-group-area">
+                                <span>
+                                  <a href="vngelong.html">Paket Ngelong</a><br />
+                                  Bayar sesuai kuota tanpa takut hangus<br />
+                                </span>
+              							</div>
+            						</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="box bg-green bmh-60">
+									<div class="box-group">
+            							<div class="box-group-icon"><a href="vspeed.html">Sp</a></div>
+                              <div class="box-group-area">
+                                <span>
+                                  <a href="vspeed.html">Paket Speed On</a><br />
+                                  Pilih kecepatan internet sesuai kebutuhan<br />
+                                </span>
+              							</div>
+            						</div>
+								</div>
+							</div>
+							<div class="col-6">
+								<div class="box bg-orange bmh-60">
+									<div class="box-group">
+            							<div class="box-group-icon"><a href="vgames.html">Gm</a></div>
+                              <div class="box-group-area">
+                                <span>
+								<a href="vgames.html">Paket Games</a><br />
+								Main games mobile lewat jalan tol<br />
+                                </span>
+              							</div>
+            						</div>
+								</div>
+							</div>					
+						</div>
+					</div>
+					<div class="card-footer bg-cyan pd-l-10">
+						<i>Copyright &copy; 2018 Laksamadi</i>
+	  					<i>Powered by <a class="text-light" href="https://laksa19.github.io">Mikhmon</a></i> <!-- Tolong jangan dihilangkan bagian ini-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+<!--
+document.login.username.focus();
+document.getElementById('title').innerHTML = window.location.hostname + " > login";
+
+// login page 2 mode by Laksamadi Guko
+var username = document.login.username;
+var password = document.login.password;
+var luser = document.getElementById("luser");
+var lpass = document.getElementById("lpass");
+var btnmem = document.getElementById("btnmem");
+var btnvcr = document.getElementById("btnvcr");
+
+// set password = username
+function setpass(){
+  var user = username.value		
+  password.value = user;
+}
+	
+username.onkeyup = setpass;
+	
+btnmem.style.backgroundColor = "#20a8d8";
+btnvcr.style.backgroundColor = "#73818f";  
+
+// change to voucher mode
+function voucher(){
+  username.focus();
+  username.onkeyup = setpass;
+  username.placeholder = "Voucher";
+  password.type = "hidden";
+  password.value = username.value;  
+  btnmem.style.backgroundColor = "#20a8d8";
+  btnvcr.style.backgroundColor = "#73818f";  
+}
+
+// change to member mode
+function member(){
+  username.focus();
+  username.onkeyup = "";
+  username.placeholder = "Username";
+  password.type= "password";
+  password.value = "";
+  btnmem.style.backgroundColor = "#73818f"; 
+  btnvcr.style.backgroundColor = "#20a8d8"; 
+}
+
+//-->
+</script>
+
+  <script type="text/javascript">
+  // Set Jadwal Sholat call PrayTimes.js
+var date = new Date();
+prayTimes.setMethod('MWL'); // Calculation Methods
+prayTimes.tune({imsak: -1, fajr: -1, dhuhr: -1, asr: -1, maghrib: -1, isha: -1}); // ihtiyati (faktor kehati-hatian) sebesar -1 menit
+var times = prayTimes.getTimes(date, [0.9466758, 111.9045541,], 7.00); // Kota Badau latitude https://github.com/benangmerah/wilayah/blob/master/datasources/daftar-nama-daerah.csv
+var list = ['Imsak', 'Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+var nama = ['Imsak', 'Subuh', 'Dhuhur', 'Ashar', 'Maghrib', 'Isya'];
+var html = '<table id="timetable"><tr>';
+
+for (var i in list) {
+  // html += '<tr><td>'+ list[i]+ '</td>';
+	html += '<td><span>' + nama[i] + '</span><br/>' + times[list[i].toLowerCase()] + '</td>';
+	}
+	html += '</tr></table>';
+	document.getElementById('table').innerHTML = html;
+</script>
+
+
+
+<script type="text/javascript">
+	// Set Tanggal dan Jam
+  $(document).ready(function() {
+	// Create two variable with the names of the months and days in an array
+	var monthNames = [ "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember" ]; 
+	var dayNames= ["Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jumat,","Sabtu,"]
+	// Create a newDate() object
+	var newDate = new Date();
+	// Extract the current date from Date object
+	newDate.setDate(newDate.getDate());
+	// Output the day, date, month and year    
+	$('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+  
+	setInterval( function() {
+	  // Create a newDate() object and extract the seconds of the current time on the visitor's
+	  var seconds = new Date().getSeconds();
+	  // Add a leading zero to seconds value
+	  $("#sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+	}, 1000);
+  
+	setInterval( function() {
+	  // Create a newDate() object and extract the minutes of the current time on the visitor's
+	  var minutes = new Date().getMinutes();
+	  // Add a leading zero to the minutes value
+	  $("#min").html(( minutes < 10 ? "0" : "" ) + minutes);
+	}, 1000);
+  
+	setInterval( function() {
+	  // Create a newDate() object and extract the hours of the current time on the visitor's
+	  var hours = new Date().getHours();
+	  // Add a leading zero to the hours value
+	  $("#hours").html(( hours < 10 ? "0" : "" ) + hours);
+	}, 1000);
+  });
+  </script>
+  
+
+<script type="text/javascript">
+  // Script Menuju Ramadhan
+var deadline = 'Feb 28 2025 00:00:00 GMT+0700';
+run_clock('clockdiv',deadline);
+</script>
+<script>
+  // Set Show hide Jadwal
+$('.Hide').click(function() {
+    $('#JadwalSholat').show(500);
+    $('.Show').show(0);
+    $('.Hide').hide(0);
+});
+$('.Show').click(function() {
+    $('#JadwalSholat').hide(500);
+    $('.Show').hide(0);
+    $('.Hide').show(0);
+});
+</script>
+
+
+<!--Start of Telegram Script-->
+<script> 
+    window.intergramId = "-801605923";
+    window.intergramCustomizations = {
+        titleClosed: 'Chat Admin',
+        titleOpen: 'Sedang Chat...',
+        introMessage: 'Halo! Ada yang bisa dibantu?',
+        autoResponse: 'Selamat datang di Obrolan Langsung dengan Admin',
+		autoResponse: 'Untuk mendapatkan voucher WiFi, ' +
+					  'download aplikasi Telegram dan cari akun "Voucher Orbit3Net" kemudian ketik /start, ' +
+					  'selanjutnya ikuti petunjuk yang diberikan, terima kasih.',
+        autoNoResponse: 'Selamat datang kembali, ' +
+                        'pesan anda akan kami jawab, silahkan tunggu.',
+        mainColor: "#1a73e8", // Can be any css supported color 'red', 'rgb(255,87,34)', etc
+        alwaysUseFloatingButton: true // Use the mobile floating button also on large screens
+    };
+</script>
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+<!--End of Telegram Script-->
+
+</body>
+</html>

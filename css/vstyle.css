@@ -1,0 +1,410 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "tahoma", sans-serif;
+  background-image: url("../img/bg.jpg");
+  background-repeat: repeat;
+  background-position: center;
+  position: relative;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(13, 90, 172, 0.8);
+  border-bottom: 1px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  margin: 0;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 40%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: #656464;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  color: rgb(110, 109, 109);
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(19, 19, 19, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h5 {
+  color: rgb(110, 109, 109);
+  padding-top: 1rem;
+}
+
+/* Kartu Paket*/
+.kartu {
+  padding: 0 7%;
+  margin-top: 6rem;
+}
+
+.kartu .kepala h1 {
+  font-size: 3rem;
+  max-width: 600px;
+}
+
+.kartu .kepala p {
+  font-size: 1.4rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+.container-paket .heading h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.container-paket .heading h3 span {
+  color: salmon;
+}
+
+/* Format Kartu */
+.kontainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem 1rem;
+  gap: 4rem;
+  padding-bottom: 12rem;
+  position: relative;
+}
+
+.card {
+  padding: 0 3%;
+  width: 20%;
+  height: auto;
+  grid-column: span 8;
+  margin: 0.8rem 0;
+  border-radius: 1.5rem;
+  position: relative;
+  box-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1);
+  background-color: #06871c;
+  transition: all0.5s;
+}
+
+.head-card {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(255, 221, 2);
+}
+
+.head-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.head-card h3 {
+  margin: 0;
+  margin-top: -8rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: antiquewhite;
+  padding-top: 0;
+}
+
+.head-card h5 {
+  color: antiquewhite;
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 0;
+}
+
+.body-card {
+  padding: 0.8rem 1rem;
+  margin-top: 4rem;
+}
+
+.body-card h1 {
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}
+
+.body-card p {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgb(205, 205, 205);
+  margin-bottom: 2rem;
+}
+
+.buy-now {
+  background-color: rgb(0, 137, 161);
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.6rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.body-card h2 {
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  padding-bottom: 2.5rem;
+}
+
+.buy-now h3 a {
+  color: aliceblue;
+  font-size: 1.8rem;
+}
+
+.buy-now:hover {
+  background-color: rgb(141, 0, 94);
+  cursor: pointer;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.link-aktif {
+  color: #fff !important;
+  font-weight: 700;
+  background-color: #cb6114 !important;
+}
+.tanpa-link {
+  color: #ffffff !important;
+  font-weight: 400;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .card {
+    width: 25%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(13, 90, 172, 0.99);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rm;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover:after {
+    transform: scaleX(0.2);
+  }
+
+  .card {
+    width: 30%;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .kepala h1 {
+    margin-top: 8rem;
+  }
+
+  .card {
+    width: 85%;
+  }
+
+  .head-card {
+    padding-bottom: 3rem;
+  }
+
+  .head-card img {
+    width: 100%;
+    padding: 0 10%;
+  }
+
+  .head-card h3 {
+    margin-top: -18rem;
+    font-size: 6rem;
+  }
+  .head-card h5 {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+  }
+  .body-card h1 {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+  }
+
+  .body-card p {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .body-card h2 {
+    margin-bottom: 1.4rem;
+    font-size: 3rem;
+  }
+
+  .buy-now {
+    margin-bottom: 2rem;
+    height: 4rem;
+  }
+  .buy-now h3 a {
+    font-size: 2.5rem;
+    color: white;
+  }
+}
