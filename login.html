@@ -2,7 +2,7 @@
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-<title id="title"></title>
+<title>Login</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="expires" content="-1" />
@@ -35,7 +35,35 @@ tr {margin: 0;}}
 							</div>
 						</div>
 
+<div id="Date"></div>
+<div id="jamtime">
+	<ul class="jamtime">
+    	<li id="hours"> </li>
+    	<li id="point">:</li>
+    	<li id="min"> </li>
+    	<li id="point">:</li>
+    	<li id="sec"> </li>
+	</ul>
+</div>
 
+<div id="prayss" class="prayss">
+	<div class="prayss__inner">
+		<h3 class="title-kota">JADWAL SHALAT KECAMATAN BADAU</h3>
+			<button class="Show onoff orange">Tutup</button>
+			<button class="Hide onoff birumuda">Lihat</button>
+    			<div id="JadwalSholat" class="tablex">
+    				<div id="table"></div>
+					<div id="clockdiv">
+						<h2>MENUJU RAMADHAN 1.446 H</h2> <!--<h2>MENUJU RAMADHAN 1444 H</h2>-->
+						<div><span class="days"></span><div class="smalltext">Hari</div></div>
+						<div><span class="hours"></span><div class="smalltext">Jam</div></div>
+						<div><span class="minutes"></span><div class="smalltext">Menit</div></div>
+						<div><span class="seconds"></span><div class="smalltext">Detik</div></div>
+					</div>
+				</div>
+	</div>
+</div>
+<!--
 						<div class="row">
 							<div class="col-12">
 								<div class="card  box-shadow">
@@ -60,6 +88,7 @@ tr {margin: 0;}}
 	    							}
 									//-->
 									</script>
+								<!--	
 								$(endif)
 						<style>
 						blink{
@@ -124,10 +153,11 @@ tr {margin: 0;}}
 			<blink class="text-center"><h3>Whatsapp FREE</h3></blink>
 		</div>
 	</div>
+	-->
 	<div class="col-12">
 		<div class="card box-shadow">
 			<div class="card-header bg-warning"><h3>Catatan</h3></div>
-			<div class="card-body align-middle">Kode Voucher / Username menggunakan huruf kecil.<br> Klik pada tab QR Code, jika kamera tidak tampil klik "Open in Chrome" dan izinkan akses kamera.</div>
+			<div class="card-body align-middle">Kode Voucher / Username menggunakan kombinasi huruf dan angka.<br> Klik pada tab QR Code, jika kamera tidak tampil klik "Open in Chrome" dan izinkan akses kamera.</div>
 		</div>
 	</div>
 </div>
@@ -298,8 +328,8 @@ function member(){
   // Set Jadwal Sholat call PrayTimes.js
 var date = new Date();
 prayTimes.setMethod('MWL'); // Calculation Methods
-prayTimes.tune({imsak: -1, fajr: -1, dhuhr: -1, asr: -1, maghrib: -1, isha: -1}); // ihtiyati (faktor kehati-hatian) sebesar -1 menit
-var times = prayTimes.getTimes(date, [0.9466758, 111.9045541,], 7.00); // Kota Badau latitude https://github.com/benangmerah/wilayah/blob/master/datasources/daftar-nama-daerah.csv
+prayTimes.tune({imsak: 0, fajr: 0, dhuhr: +1, asr: +1, maghrib: +2, isha: 0}); // ihtiyati (faktor kehati-hatian) sebesar 0 menit
+var times = prayTimes.getTimes(date, [-0.2787808,111.4752851], 7.00); // Kota Badau latitude https://github.com/benangmerah/wilayah/blob/master/datasources/daftar-nama-daerah.csv
 var list = ['Imsak', 'Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
 var nama = ['Imsak', 'Subuh', 'Dhuhur', 'Ashar', 'Maghrib', 'Isya'];
 var html = '<table id="timetable"><tr>';
